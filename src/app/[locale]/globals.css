@@ -9,7 +9,7 @@ html {
 }
 body {
   @apply font-consola;
-  @apply bg-primary;
+  @apply bg-primary text-black;
 }
 
 .bento-container {
