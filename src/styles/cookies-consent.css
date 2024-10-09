@@ -1,0 +1,25 @@
+.cc-nb-main-container {
+  background-color: #cbc7be;
+  border-top: 4px solid #3e3c39;
+  border-left: 4px solid #3e3c39;
+}
+.cc-nb-title,
+.cc-nb-text {
+  color: #3e3c39 !important;
+}
+
+.cc-nb-okagree {
+  background-color: #cbc7be !important;
+  color: #212322 !important;
+  border: 1px solid #3e3c39 !important;
+}
+
+.cc-nb-reject {
+  background-color: #cbc7be !important;
+  border: 1px solid white !important;
+  color: #212322 !important;
+}
+.cc-nb-changep {
+  background-color: #cbc7be !important;
+  color: #212322 !important;
+}

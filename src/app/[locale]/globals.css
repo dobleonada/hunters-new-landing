@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '../../styles/markdown.css';
+@import '../../styles/cookies-consent.css';
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply font-consola;
+  @apply bg-primary;
+}
+
+.bento-container {
+  gap: 1rem;
+  padding: 0;
+}
+
+.beneto-element {
+  padding: 0;
+  border-radius: 0;
+}
+.Typewriter {
+  width: 200px;
+  word-break: unset;
+  white-space: nowrap;
+}
