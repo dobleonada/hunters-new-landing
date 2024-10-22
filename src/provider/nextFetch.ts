@@ -17,6 +17,7 @@ export const nextFetch = async ({
         ? { tags: ['revalidate'] }
         : undefined,
   })
+  console.log(response)
   const responseData = await response.json()
   return responseData
 }
