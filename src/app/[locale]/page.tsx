@@ -4,6 +4,7 @@ import { Cities } from '@/components/Cities'
 import { Services } from '@/components/Services'
 import { nextFetch } from '@/provider/nextFetch'
 import { Metadata } from 'next'
+import { Founders } from '@/components/Founders'
 
 type HomeProps = {
   params: {
@@ -52,6 +53,7 @@ export default async function HomePage({ params }: HomeProps) {
       <BlurHero {...data.hero} />
       <AboutUs {...data.aboutUs} />
       <Services {...data.services} />
+      <Founders {...data.people} />
       <Cities {...data.citiesList} />
     </main>
   )

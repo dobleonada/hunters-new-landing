@@ -15,7 +15,7 @@ export const nextFetch = async ({
     next:
       process.env.NODE_ENV !== 'development'
         ? { tags: ['revalidate'] }
-        : undefined,
+        : { revalidate: 1 },
   })
   const responseData = await response.json()
   return responseData

@@ -1,13 +1,7 @@
-.markdown p:first-child {
-  margin-top: 0;
-}
-
-.markdown p {
-  margin-top: 8px;
-}
-
-.markdown h3 {
-  font-size: 2em;
-  margin-top: 1.5rem;
-  font-weight: 600;
+.markdown-about-us em {
+  font-style: normal;
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  transform: scaleX(-1);
+  display: inline-block;
 }
