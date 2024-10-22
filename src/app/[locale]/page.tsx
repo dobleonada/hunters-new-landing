@@ -1,5 +1,6 @@
 import { AboutUs } from '@/components/AboutUs'
 import { BlurHero } from '@/components/BlurHero'
+import { Services } from '@/components/Services'
 import { nextFetch } from '@/provider/nextFetch'
 import { Metadata } from 'next'
 
@@ -45,11 +46,11 @@ export default async function HomePage({ params }: HomeProps) {
   const { locale } = params
   const data = await fetchData(locale)
 
-  console.log(data)
   return (
     <main>
       <BlurHero {...data.hero} />
       <AboutUs {...data.aboutUs} />
+      <Services {...data.services} />
     </main>
   )
 }
