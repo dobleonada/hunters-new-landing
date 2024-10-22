@@ -1,6 +1,7 @@
 import { AboutUs } from '@/components/AboutUs'
 import { BlurHero } from '@/components/BlurHero'
 import { Cities } from '@/components/Cities'
+import { Services } from '@/components/Services'
 import { nextFetch } from '@/provider/nextFetch'
 import { Metadata } from 'next'
 
@@ -45,11 +46,12 @@ export async function generateMetadata({
 export default async function HomePage({ params }: HomeProps) {
   const { locale } = params
   const data = await fetchData(locale)
-
+  console.log(data)
   return (
     <main>
       <BlurHero {...data.hero} />
       <AboutUs {...data.aboutUs} />
+      <Services {...data.services} />
       <Cities {...data.citiesList} />
     </main>
   )
