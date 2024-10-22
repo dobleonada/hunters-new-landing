@@ -6,6 +6,7 @@ import { consola } from '../fonts/index'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { Navigation } from '@/components/Navigation'
+import { Footer } from '@/components/Footer'
 
 export default async function RootLayout({
   children,
@@ -24,8 +25,8 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={params.locale} messages={messages}>
           <Navigation locale={params.locale} />
           {children}
-          {/* <Footer locale={params.locale} />
-          <CookieConsent /> */}
+          <Footer locale={params.locale} />
+          {/*<CookieConsent /> */}
         </NextIntlClientProvider>
       </body>
     </html>
