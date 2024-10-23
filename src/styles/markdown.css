@@ -5,3 +5,16 @@
   transform: scaleX(-1);
   display: inline-block;
 }
+
+.mark-down-legal div {
+  margin-bottom: 3rem;
+}
+.mark-down-legal p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mark-down-legal li {
+  list-style-type: disc;
+  margin-left: 1rem;
+}

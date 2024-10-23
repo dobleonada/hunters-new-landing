@@ -17,6 +17,8 @@ export const nextFetch = async ({
         ? { tags: ['revalidate'] }
         : { revalidate: 1 },
   })
+
   const responseData = await response.json()
+
   return responseData
 }
