@@ -9,7 +9,9 @@ export const Navigation = ({ locale }: NavigationProps) => {
   return (
     <header className="container">
       <nav className="flex items-center justify-between py-6">
-        <Image width={44} height={44} src="/images/logo.svg" alt="logo" />
+        <Link href="/" locale={locale}>
+          <Image width={44} height={44} src="/images/logo.svg" alt="logo" />
+        </Link>
         <ul className="flex gap-8 tracking-[4px]">
           <li>
             <Link href={`/${locale}#contact`}>CONTACT</Link>
