@@ -33,7 +33,7 @@ export const Founders = ({ contactPerson, image }: FoundersProps) => {
       >
         <p>{props.fullName}</p>
         <p>{props.jobPosition}</p>
-        <Link href={`mailti:${props.mail}`}>{props.email}</Link>
+        <Link href={`mailti:${props.email}`}>{props.email}</Link>
       </div>
     )
   }
