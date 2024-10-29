@@ -38,7 +38,7 @@ export const Founders = ({ contactPerson, image }: FoundersProps) => {
     )
   }
   return (
-    <section className="container relative">
+    <section className="container relative" id="contact">
       <figure className="mx-auto mb-10 w-full md:w-[600px]">
         <Image
           src={image.data.attributes.url}

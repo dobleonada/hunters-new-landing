@@ -49,7 +49,7 @@ export default async function HomePage({ params }: HomeProps) {
   const { locale } = params
   const data = await fetchData(locale)
   return (
-    <main>
+    <main className="space-y-10 md:space-y-28">
       <BlurHero {...data.hero} />
       <AboutUs {...data.aboutUs} />
       <BentoGrid {...data.bentoImages} />

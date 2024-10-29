@@ -49,7 +49,6 @@ export const BentoGrid = ({ ...data }: BentoGridProps) => {
   return (
     <section className="container space-y-20">
       {bentoItems.map((el) => {
-        console.log(el.title, el.titlePositionIsRight)
         return (
           <article
             key={el.id}
@@ -58,8 +57,10 @@ export const BentoGrid = ({ ...data }: BentoGridProps) => {
               el.titlePositionIsRight && 'md:flex-row-reverse'
             )}
           >
-            <h4 className="whitespace-nowrap text-2xl">{el.title}</h4>
-            <div className="h-auto w-[1px] bg-black"></div>
+            <h4 className="whitespace-nowrap text-lg md:text-2xl">
+              {el.title}
+            </h4>
+            <div className="-ml-4 h-[1px] w-auto bg-black md:-ml-0 md:h-auto md:w-[1px]"></div>
             <BentoGridImages images={el.bentoImage as any} />
           </article>
         )

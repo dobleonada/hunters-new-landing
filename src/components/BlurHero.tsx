@@ -6,7 +6,7 @@ type BlurHeroProps = {
 }
 export const BlurHero = ({ hero }: BlurHeroProps) => {
   return (
-    <section className="">
+    <section>
       <Image
         src="/images/imagen-desenfocada-texto-desktop.png"
         width={3508}

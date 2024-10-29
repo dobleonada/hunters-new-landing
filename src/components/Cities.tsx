@@ -4,8 +4,8 @@ export type CitiesProps = {
 }
 export const Cities = ({ city }: CitiesProps) => {
   return (
-    <section className="container mt-14">
-      <p className="text-secondary text-s text-balance text-center md:text-lg lg:text-2xl">
+    <section className="container">
+      <p className="text-balance text-center text-sm text-secondary md:text-lg lg:text-2xl">
         {city.map((city) => city.cityName).join(' / ')}
       </p>
     </section>
