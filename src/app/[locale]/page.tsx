@@ -5,6 +5,7 @@ import { Services } from '@/components/Services'
 import { nextFetch } from '@/provider/nextFetch'
 import { Metadata } from 'next'
 import { Founders } from '@/components/Founders'
+import { BentoGrid } from '@/components/BentoGrid/BentoGrid'
 
 type HomeProps = {
   params: {
@@ -47,11 +48,11 @@ export async function generateMetadata({
 export default async function HomePage({ params }: HomeProps) {
   const { locale } = params
   const data = await fetchData(locale)
-  console.log(data)
   return (
     <main>
       <BlurHero {...data.hero} />
       <AboutUs {...data.aboutUs} />
+      <BentoGrid {...data.bentoImages} />
       <Services {...data.services} />
       <Founders {...data.people} />
       <Cities {...data.citiesList} />

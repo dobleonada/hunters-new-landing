@@ -12,10 +12,11 @@ export const nextFetch = async ({
     url += `&filters[slug][$eq]=${slug}`
   }
   const response = await fetch(url, {
-    next:
-      process.env.NODE_ENV !== 'development'
-        ? { tags: ['revalidate'] }
-        : { revalidate: 1 },
+    cache: 'no-cache',
+    // next:
+    //   process.env.NODE_ENV !== 'development'
+    //     ? { tags: ['revalidate'] }
+    //     : { revalidate: 1 },
   })
 
   const responseData = await response.json()

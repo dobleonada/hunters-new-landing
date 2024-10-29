@@ -7,7 +7,7 @@ type AboutUsProps = {
 
 export const AboutUs = ({ textOne, textTwo }: AboutUsProps) => {
   return (
-    <>
+    <div>
       <section className="relative mt-10 flex h-[250px] items-center justify-center md:h-[400px]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50 md:bg-contain"
@@ -24,6 +24,6 @@ export const AboutUs = ({ textOne, textTwo }: AboutUsProps) => {
           {textTwo}
         </p>
       </section>
-    </>
+    </div>
   )
 }
