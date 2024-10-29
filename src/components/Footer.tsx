@@ -50,7 +50,7 @@ export const Footer = ({ locale }: FooterProps) => {
   const legalLinks = () => {
     return (
       <ul className="my-2 flex flex-wrap justify-center gap-2">
-        {translations[locale].links.map((link) => {
+        {translations[locale].links.map((link: any) => {
           return (
             <li>
               <Link href={generateLegalPathLink(link.path)}>{link.title}</Link>
