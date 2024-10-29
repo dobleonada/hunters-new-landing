@@ -6,6 +6,7 @@ import { nextFetch } from '@/provider/nextFetch'
 import { Metadata } from 'next'
 import { Founders } from '@/components/Founders'
 import { BentoGrid } from '@/components/BentoGrid/BentoGrid'
+import CookiesBanner from '@/components/CookiesBanner'
 
 type HomeProps = {
   params: {

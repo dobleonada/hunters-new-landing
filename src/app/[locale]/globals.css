@@ -26,3 +26,19 @@ body {
   word-break: unset;
   white-space: nowrap;
 }
+
+.cc-nb-main-container {
+  background-color: #e9eae4;
+  border-top: 4px solid #222223;
+  border-left: 4px solid #222223;
+}
+.cc-nb-title,
+.cc-nb-text {
+  color: #222223 !important;
+}
+
+.cc-nb-okagree,
+.cc-nb-reject {
+  background: #222223 !important;
+  color: white !important;
+}

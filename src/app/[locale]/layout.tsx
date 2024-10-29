@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
+import { CookieConsent } from '@/components/CookiesBanner'
 
 export default async function RootLayout({
   children,
@@ -26,7 +27,7 @@ export default async function RootLayout({
           <Navigation locale={params.locale} />
           {children}
           <Footer locale={params.locale} />
-          {/*<CookieConsent /> */}
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>
