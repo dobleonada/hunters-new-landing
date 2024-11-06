@@ -5,6 +5,7 @@ type BlurHeroProps = {
   hero: string
 }
 export const BlurHero = ({ hero }: BlurHeroProps) => {
+  return null
   return (
     <section>
       <Image
