@@ -33,7 +33,12 @@ const words = [
   'Digital',
 ]
 
-export const Hero = () => {
+type BlurHeroProps = {
+  id: number
+  hero: string
+}
+
+export const Hero = ({ hero }: BlurHeroProps) => {
   return (
     <section className="relative md:mt-10">
       <div className="flex h-full w-full flex-wrap justify-center gap-4 md:gap-10">
@@ -55,11 +60,17 @@ export const Hero = () => {
           className="p-30 z-40 w-[400px] p-10"
           style={{
             background: 'rgba(233, 234, 228, 0.6)',
-            boxShadow: '0 0 50px 25px rgba(233, 234, 228, 0.6)', // Increased blur
+            boxShadow: '0 0 50px 25px rgba(233, 234, 228, 0.7)', // Increased blur
             borderRadius: '15px',
           }}
         />
       </figure>
+      <div className="mt-8 md:mt-16">
+        <div className="flex items-center justify-center gap-4">
+          <p className="text-black md:text-2xl">{hero}</p>
+          <Image src="/images/focus.svg" width={37} height={37} alt="focus" />
+        </div>
+      </div>
     </section>
   )
 }
