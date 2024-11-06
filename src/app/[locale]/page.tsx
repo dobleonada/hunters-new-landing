@@ -1,11 +1,12 @@
 import { AboutUs } from '@/components/AboutUs'
-import { BlurHero } from '@/components/BlurHero'
+// import { BlurHero } from '@/components/BlurHero'
 import { Cities } from '@/components/Cities'
 import { Services } from '@/components/Services'
 import { nextFetch } from '@/provider/nextFetch'
 import { Metadata } from 'next'
 import { Founders } from '@/components/Founders'
 import { BentoGrid } from '@/components/BentoGrid/BentoGrid'
+import { Hero } from '@/components/Hero'
 
 type HomeProps = {
   params: {
@@ -50,7 +51,7 @@ export default async function HomePage({ params }: HomeProps) {
   const data = await fetchData(locale)
   return (
     <main className="space-y-10 md:space-y-28">
-      <BlurHero {...data.hero} />
+      <Hero />
       <AboutUs {...data.aboutUs} />
       <BentoGrid {...data.bentoImages} />
       <Services {...data.services} />
