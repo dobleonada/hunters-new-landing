@@ -7,6 +7,7 @@ import { Metadata } from 'next'
 import { Founders } from '@/components/Founders'
 import { Hero } from '@/components/Hero'
 import { LogoGrid } from '@/components/LogoGrid'
+import { IntroductionText } from '@/components/IntroductionText'
 
 type HomeProps = {
   params: {
@@ -54,7 +55,7 @@ export default async function HomePage({ params }: HomeProps) {
     <main className="space-y-10 md:space-y-28">
       <Hero {...data.hero} />
       <AboutUs {...data.aboutUs} />
-      {/* <IntroText {...data.bentoImages} /> */}
+      <IntroductionText {...data.IntroductionText} />
       <AboutUs {...data.AboutProjects} />
       <Services {...data.servicesList} />
       {/* CARRUSEL */}

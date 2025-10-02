@@ -4,7 +4,6 @@ export type ServicesProps = {
   serviceHunterList: { id: number; serviceHunter: string }[]
 }
 export const Services = ({ title, serviceHunterList }: ServicesProps) => {
-  console.log(serviceHunterList)
   return (
     <section className="mx-4">
       <h3 className="sub-title">{title}</h3>
