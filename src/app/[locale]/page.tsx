@@ -8,6 +8,7 @@ import { Founders } from '@/components/Founders'
 import { Hero } from '@/components/Hero'
 import { LogoGrid } from '@/components/LogoGrid'
 import { IntroductionText } from '@/components/IntroductionText'
+import { Carousel } from '@/components/Carousel'
 
 type HomeProps = {
   params: {
@@ -58,7 +59,7 @@ export default async function HomePage({ params }: HomeProps) {
       <IntroductionText {...data.IntroductionText} />
       <AboutUs {...data.AboutProjects} />
       <Services {...data.servicesList} />
-      {/* CARRUSEL */}
+      <Carousel {...data.Carousel} />
       <Cities {...data.citiesList} />
       <LogoGrid {...data.LogoGrid} />
       <Founders {...data.people} />
