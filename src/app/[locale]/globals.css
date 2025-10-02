@@ -12,14 +12,8 @@ body {
   @apply bg-primary text-black;
 }
 
-.bento-container {
-  gap: 1rem;
-  padding: 0;
-}
-
-.beneto-element {
-  padding: 0;
-  border-radius: 0;
+.sub-title {
+  @apply mb-8 text-balance text-center font-bold md:mb-16 md:text-3xl;
 }
 .Typewriter {
   width: 200px;

@@ -10,7 +10,7 @@ const config: Config = {
       colors: {
         primary: '#E9EAE4',
         black: '#222223',
-        secondary: '#3E3C39'
+        secondary: '#3E3C39',
       },
       fontFamily: {
         consola: 'var(--font-consola)',
