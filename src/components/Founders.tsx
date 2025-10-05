@@ -31,7 +31,7 @@ export const Founders = ({ contactPerson, image }: FoundersProps) => {
           props.className
         )}
       >
-        <Link href={`mailti:${props.email}`}>{props.email}</Link>
+        <Link href={`mailto:${props.email}`}>{props.email}</Link>
       </div>
     )
   }
