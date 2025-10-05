@@ -1,5 +1,1 @@
-export default {
-  services: {
-      title: "¿Qué hacemos?",
-  }
-}
+export default {}

@@ -64,7 +64,7 @@ export const Footer = ({ locale }: FooterProps) => {
   return (
     <footer
       id="footer"
-      className="flex flex-col items-center justify-center pb-14 text-xs font-thin text-secondary md:text-sm lg:text-base"
+      className="mt-20 flex flex-col items-center justify-center pb-14 text-xs font-thin text-secondary md:text-sm lg:text-base"
     >
       {legalLinks()}
       <p>Huntercreativos {currentYear}®</p>

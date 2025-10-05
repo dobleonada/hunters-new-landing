@@ -5,8 +5,10 @@ import { Services } from '@/components/Services'
 import { nextFetch } from '@/provider/nextFetch'
 import { Metadata } from 'next'
 import { Founders } from '@/components/Founders'
-import { BentoGrid } from '@/components/BentoGrid/BentoGrid'
 import { Hero } from '@/components/Hero'
+import { LogoGrid } from '@/components/LogoGrid'
+import { IntroductionText } from '@/components/IntroductionText'
+import { Carousel } from '@/components/Carousel'
 
 type HomeProps = {
   params: {
@@ -54,10 +56,13 @@ export default async function HomePage({ params }: HomeProps) {
     <main className="space-y-10 md:space-y-28">
       <Hero {...data.hero} />
       <AboutUs {...data.aboutUs} />
-      <BentoGrid {...data.bentoImages} />
-      <Services {...data.services} />
-      <Founders {...data.people} />
+      <IntroductionText {...data.IntroductionText} />
+      <AboutUs {...data.AboutProjects} />
+      <Services {...data.servicesList} />
+      <Carousel {...data.Carousel} />
       <Cities {...data.citiesList} />
+      <LogoGrid {...data.LogoGrid} />
+      <Founders {...data.people} />
     </main>
   )
 }

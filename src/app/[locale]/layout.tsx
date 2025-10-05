@@ -22,7 +22,7 @@ export default async function RootLayout({
 
   return (
     <html lang={params.locale}>
-      <body className={`${consola.variable}`}>
+      <body className={`${consola.variable}`} suppressHydrationWarning>
         <NextIntlClientProvider locale={params.locale} messages={messages}>
           <Navigation locale={params.locale} />
           {children}

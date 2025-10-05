@@ -27,12 +27,10 @@ export const Founders = ({ contactPerson, image }: FoundersProps) => {
     return (
       <div
         className={clsx(
-          'text-center font-bold tracking-[4px] md:text-lg',
+          'text-center tracking-[4px] md:text-lg',
           props.className
         )}
       >
-        <p>{props.fullName}</p>
-        <p>{props.jobPosition}</p>
         <Link href={`mailti:${props.email}`}>{props.email}</Link>
       </div>
     )
@@ -47,17 +45,14 @@ export const Founders = ({ contactPerson, image }: FoundersProps) => {
           height={image.data.attributes.height}
         />
       </figure>
-      <div className="flex flex-col gap-8">
-        <PersonInfo {...contactPerson[0]} className="top-24 md:absolute" />
-        <PersonInfo
-          {...contactPerson[1]}
-          className="right-0 top-24 md:absolute"
-        />
-        <PersonInfo {...contactPerson[2]} className="bottom-12 md:absolute" />
-        <PersonInfo
-          {...contactPerson[3]}
-          className="bottom-12 right-0 md:absolute"
-        />
+      <div className="space-y-6 md:space-y-8">
+        <p className="text-center text-xl font-bold md:text-2xl">
+          CEO & COFOUNDER
+        </p>
+        <div>
+          <PersonInfo {...contactPerson[0]} />
+          <PersonInfo {...contactPerson[1]} />
+        </div>
       </div>
     </section>
   )
