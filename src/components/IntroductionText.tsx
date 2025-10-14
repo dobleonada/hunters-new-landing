@@ -169,7 +169,7 @@ export const IntroductionText = ({
   if (!description?.length && !image) return null
 
   const paragraphClass =
-    'text-center text-[11px] uppercase tracking-[0.4em] text-secondary md:text-base md:leading-7 md:tracking-[0.5em]'
+    'text-center text-[11px]  text-secondary md:text-lg md:leading-7 '
 
   const lines: Line[] = []
   let currentSegments: Segment[] = []
