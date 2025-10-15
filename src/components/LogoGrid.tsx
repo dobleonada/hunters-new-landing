@@ -31,7 +31,7 @@ export const LogoGrid = ({ title, logos }: Props) => {
   return (
     <section className="mx-auto max-w-[1440px] px-4">
       <h3 className="sub-title relative z-10">{title}</h3>
-      <div className="flex flex-wrap justify-center gap-4 md:gap-10">
+      <div className="flex flex-wrap justify-center gap-4">
         {logos?.data?.map((el) => {
           return (
             <Image
@@ -41,7 +41,7 @@ export const LogoGrid = ({ title, logos }: Props) => {
               alt={el.attributes.alternativeText ?? ''}
               src={el.attributes.url}
               key={el.id}
-              className="h-6 w-auto object-contain md:h-9"
+              className="h-4 w-auto object-contain md:h-9"
             />
           )
         })}
