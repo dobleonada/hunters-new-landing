@@ -53,7 +53,7 @@ export default async function HomePage({ params }: HomeProps) {
   const data = await fetchData(locale)
 
   return (
-    <main className="space-y-10 md:space-y-28">
+    <main className="space-y-10 md:space-y-20">
       <Hero {...data.hero} />
       <AboutUs {...data.aboutUs} />
       <IntroductionText {...data.IntroductionText} />

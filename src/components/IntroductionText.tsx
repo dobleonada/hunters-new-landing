@@ -223,7 +223,7 @@ export const IntroductionText = ({
   return (
     <section className="mx-auto max-w-[1080px] px-4">
       <h3 className="sub-title">{title}</h3>
-      <div className="flex flex-col items-center gap-4 md:gap-6">
+      <div className="md:gap- flex flex-col items-center gap-2">
         {lines.map((line) => {
           if (line.kind === 'spacer') {
             return <div key={line.key} className="h-2 md:h-4" aria-hidden />

@@ -13,8 +13,9 @@ body {
 }
 
 .sub-title {
-  @apply mb-8 text-balance text-center font-bold md:mb-16 md:text-3xl;
+  @apply mb-2 text-balance text-center font-bold md:mb-10 md:text-3xl;
 }
+
 .Typewriter {
   width: 200px;
   word-break: unset;
