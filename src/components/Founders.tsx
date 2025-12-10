@@ -37,14 +37,14 @@ export const Founders = ({ contactPerson, image }: FoundersProps) => {
   }
   return (
     <section className="container relative" id="contact">
-      <figure className="mx-auto mb-10 w-full md:w-[600px]">
+      {/* <figure className="mx-auto mb-10 w-full md:w-[600px]">
         <Image
           src={image.data.attributes.url}
           alt={image.data.attributes.alternativeText}
           width={image.data.attributes.width}
           height={image.data.attributes.height}
         />
-      </figure>
+      </figure> */}
       <div className="space-y-6 md:space-y-8">
         <p className="text-center text-xl font-bold md:text-2xl">
           CEO & COFOUNDER
