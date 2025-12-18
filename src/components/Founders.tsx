@@ -47,7 +47,7 @@ export const Founders = ({ contactPerson, image }: FoundersProps) => {
       </figure> */}
       <div className="space-y-6 md:space-y-8">
         <p className="text-center text-xl font-bold md:text-2xl">
-          CEO & FOUNDER
+          BOARD OF DIRECTORS
         </p>
         <div>
           <PersonInfo {...contactPerson[0]} />
