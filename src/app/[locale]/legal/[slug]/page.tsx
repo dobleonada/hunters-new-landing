@@ -1,6 +1,7 @@
 import { LegalTextBlocks } from '@/components/LegalTextBlocks'
 import { nextFetch } from '@/provider/nextFetch'
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 
 type LegalPageProps = {
   params: {
@@ -13,6 +14,10 @@ export async function generateMetadata({
   params,
 }: LegalPageProps): Promise<Metadata> {
   const data = await fetchData(params.locale, params.slug)
+  if (!data?.seo) {
+    return {}
+  }
+
   const seo = data.seo
   return {
     title: seo.metaTitle,
@@ -24,9 +29,9 @@ export async function generateMetadata({
       description: seo.description,
       images: [
         {
-          url: seo.metaImage.data.attributes.url,
-          width: seo.metaImage.data.attributes.width,
-          height: seo.metaImage.data.attributes.height,
+          url: seo.metaImage?.data?.attributes?.url,
+          width: seo.metaImage?.data?.attributes?.width,
+          height: seo.metaImage?.data?.attributes?.height,
         },
       ],
     },
@@ -35,16 +40,20 @@ export async function generateMetadata({
 
 const fetchData = async (locale: string, slug: string) => {
   const response = await nextFetch({
-    lang: 'es',
+    lang: locale,
     path: '/legal-pages-hunters',
     slug,
   })
 
-  return response.data[0].attributes
+  return response.data?.[0]?.attributes ?? null
 }
 
 export default async function LegalPage({ params }: LegalPageProps) {
   const data = await fetchData(params.locale, params.slug)
+  if (!data) {
+    notFound()
+  }
+
   return (
     <main className="container mt-10 text-secondary">
       <h1 className="mb-10 text-4xl font-bold">{data.seo.metaTitle}</h1>

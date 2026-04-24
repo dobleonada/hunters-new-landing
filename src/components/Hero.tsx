@@ -33,19 +33,18 @@ const words = [
   'Innovation',
 ]
 
-type BlurHeroProps = {
-  id: number
+type HeroProps = {
   hero: string
 }
 
-export const Hero = ({ hero }: BlurHeroProps) => {
+export const Hero = ({ hero }: HeroProps) => {
   return (
-    <section className="relative md:mt-10">
-      <div className="flex h-full w-full flex-wrap justify-center gap-4 md:gap-10">
+    <section className="relative px-4 pt-2 md:mt-10 md:px-6">
+      <div className="flex h-full w-full flex-wrap justify-center gap-3 md:gap-10">
         {words.map((word, index) => (
           <p
             key={index}
-            className="relative z-10 text-2xl font-light text-black blur-sm transition-all hover:blur-0 md:text-5xl"
+            className="relative z-10 text-xl font-light text-black blur-sm transition-all hover:blur-0 sm:text-2xl md:text-5xl"
           >
             {word}
           </p>
@@ -53,22 +52,28 @@ export const Hero = ({ hero }: BlurHeroProps) => {
       </div>
       <figure className="absolute inset-0 flex items-center justify-center">
         <Image
-          src="/images/logo-hunter.svg"
+          src="/images/logo-hunter-white.svg"
           alt="Hero"
           width={1911}
           height={471}
-          className="p-30 z-40 w-[400px] p-10"
+          className="z-40 w-[min(82vw,400px)] p-6 md:p-10"
           style={{
-            background: 'rgba(233, 234, 228, 0.6)',
-            boxShadow: '0 0 50px 25px rgba(233, 234, 228, 0.7)', // Increased blur
+            background: 'rgba(68, 85, 107, 0.6)',
+            boxShadow: '0 0 50px 25px rgba(68, 85, 107, 0.7)',
             borderRadius: '15px',
           }}
         />
       </figure>
       <div className="mt-8 md:mt-16">
-        <div className="flex items-center justify-center gap-4">
-          <p className="text-black md:text-2xl">{hero}</p>
-          <Image src="/images/focus.svg" width={37} height={37} alt="focus" />
+        <div className="flex flex-wrap items-center justify-center gap-3 px-4 text-center md:gap-4">
+          <p className="text-sm text-white sm:text-base md:text-2xl">{hero}</p>
+          <Image
+            src="/images/focus.svg"
+            width={37}
+            height={37}
+            alt="focus"
+            className="h-7 w-7 md:h-[37px] md:w-[37px]"
+          />
         </div>
       </div>
     </section>
