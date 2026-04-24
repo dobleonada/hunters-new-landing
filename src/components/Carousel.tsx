@@ -46,7 +46,7 @@ const ArrowIcon = ({ direction }: { direction: 'left' | 'right' }) => {
       className="h-4 w-4 md:h-7 md:w-7"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="white"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -161,7 +161,7 @@ export const Carousel = ({ title, images }: CarouselProps) => {
   }
 
   return (
-    <section className="mx-auto w-full max-w-[1440px] px-4">
+    <section className="mx-auto w-full max-w-[1440px] px-6 md:px-10">
       {title ? (
         <h3 className="sub-title mb-6 text-center md:mb-10">{title}</h3>
       ) : null}
@@ -193,7 +193,7 @@ export const Carousel = ({ title, images }: CarouselProps) => {
                 type="button"
                 onClick={handlePrev}
                 aria-label="Imagen anterior"
-                className="group absolute left-0 top-1/2 z-10 -translate-x-full -translate-y-1/2 rounded-full border border-secondary/30 bg-transparent p-2 text-secondary transition hover:border-secondary hover:bg-secondary/10 hover:text-black md:left-[-4.5rem] md:translate-x-0 md:p-4"
+                className="group absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full border border-secondary/30 bg-primary/40 p-2 text-secondary backdrop-blur-sm transition hover:border-secondary hover:bg-secondary/10 hover:text-black md:left-[-4.5rem] md:bg-transparent md:p-4"
               >
                 <ArrowIcon direction="left" />
               </button>
@@ -201,7 +201,7 @@ export const Carousel = ({ title, images }: CarouselProps) => {
                 type="button"
                 onClick={handleNext}
                 aria-label="Imagen siguiente"
-                className="group absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-full rounded-full border border-secondary/30 bg-transparent p-2 text-secondary transition hover:border-secondary hover:bg-secondary/10 hover:text-black md:right-[-4.5rem] md:translate-x-0 md:p-4"
+                className="group absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full border border-secondary/30 bg-primary/40 p-2 text-secondary backdrop-blur-sm transition hover:border-secondary hover:bg-secondary/10 hover:text-black md:right-[-4.5rem] md:bg-transparent md:p-4"
               >
                 <ArrowIcon direction="right" />
               </button>
@@ -210,7 +210,7 @@ export const Carousel = ({ title, images }: CarouselProps) => {
         </div>
 
         {slides.length > 1 ? (
-          <div className="flex w-full max-w-[1120px] gap-4 overflow-x-auto pb-2 pt-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex w-full max-w-[1120px] gap-3 overflow-x-auto pb-2 pt-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:gap-4">
             {slides.map((slide, index) => {
               const isActive = index === activeIndex
               return (
@@ -218,7 +218,7 @@ export const Carousel = ({ title, images }: CarouselProps) => {
                   key={slide.id}
                   type="button"
                   onClick={() => handleSelect(index)}
-                  className={`relative h-24 w-36 shrink-0 snap-start overflow-hidden rounded-xl border transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black md:h-28 md:w-40 ${
+                  className={`relative h-20 w-28 shrink-0 snap-start overflow-hidden rounded-xl border transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:h-24 sm:w-36 md:h-28 md:w-40 ${
                     isActive
                       ? 'border-secondary ring-2 ring-secondary'
                       : 'border-transparent opacity-70 hover:opacity-100'

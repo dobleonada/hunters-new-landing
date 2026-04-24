@@ -8,9 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#E9EAE4',
+        primary: '#44556B',
         black: '#222223',
-        secondary: '#3E3C39',
+        white: '#ffffff',
+        secondary: '#6BCABA',
       },
       fontFamily: {
         consola: 'var(--font-consola)',

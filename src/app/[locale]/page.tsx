@@ -1,7 +1,6 @@
 import { AboutUs } from '@/components/AboutUs'
-// import { BlurHero } from '@/components/BlurHero'
+import { AboutUsIntro } from '@/components/AboutUsIntro'
 import { Cities } from '@/components/Cities'
-import { Services } from '@/components/Services'
 import { nextFetch } from '@/provider/nextFetch'
 import { Metadata } from 'next'
 import { Founders } from '@/components/Founders'
@@ -9,6 +8,10 @@ import { Hero } from '@/components/Hero'
 import { LogoGrid } from '@/components/LogoGrid'
 import { IntroductionText } from '@/components/IntroductionText'
 import { Carousel } from '@/components/Carousel'
+import { WhatWeDoIntro } from '@/components/WhatWeDoIntro'
+import { WhatWeDoGrid } from '@/components/WhatWeDoGrid'
+import { CmsSectionImage } from '@/components/CmsSectionImage'
+import { ServiceCategoryGridNew } from '@/components/ServiceCategoryGridNew'
 
 type HomeProps = {
   params: {
@@ -55,13 +58,24 @@ export default async function HomePage({ params }: HomeProps) {
   return (
     <main className="space-y-10 md:space-y-20">
       <Hero {...data.hero} />
-      <AboutUs {...data.aboutUs} />
+      <AboutUsIntro {...data.aboutUs} />
       <IntroductionText {...data.IntroductionText} />
-      <AboutUs {...data.AboutProjects} />
-      <Services {...data.servicesList} />
-      <Carousel {...data.Carousel} />
-      <Cities {...data.citiesList} />
-      <LogoGrid {...data.LogoGrid} />
+      <WhatWeDoIntro {...data.whatWeDoSection} />
+      <WhatWeDoGrid {...data.whatWeDoSection} />
+      <CmsSectionImage
+        image={data.imageExperience}
+        title="20 años de diseño y fabricación"
+        imageMaxWidthClassName="max-w-[62.4rem]"
+      />
+      <ServiceCategoryGridNew {...data.serviceListSectionNew} />
+      <div className="space-y-6 md:space-y-8">
+        <AboutUs {...data.AboutProjects} />
+        <Carousel {...data.Carousel} />
+      </div>
+      <div className="space-y-4 md:space-y-6">
+        <Cities {...data.citiesList} />
+        <LogoGrid logos={data.LogoGrid.logos} />
+      </div>
       <Founders {...data.people} />
     </main>
   )
